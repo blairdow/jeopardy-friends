@@ -59,8 +59,9 @@ a {
 }
 
 .chatroom {
-    height: 20vh;
-
+    height: 40vh;
+    overflow-y: auto;
+    scroll-behavior: auto;
 }
 
 .msg-content {
@@ -74,13 +75,6 @@ a:hover {
 a {
     color: #f2ea66;
 }
-
-/*
-.login-index {
-    margin-top: -15px;
-}
-*/
-
 
 .user-info {
     border: #f2ea66 solid 1px;
@@ -103,6 +97,12 @@ a {
 /*MEDIA QUERIES*/
 
 @media (max-width: 992px) {
+    #category, #question, .chatroom {
+        font-size: 1em;
+    }
+    .chatroom {
+        height: 20vh;
+    }
     .cropped-trebek-img {
         display: initial;
     }

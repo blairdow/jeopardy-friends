@@ -68,34 +68,7 @@ function makeCategory(obj) {
     return `<p>${obj.category}</p>`
 }
 
-// function generateQuestion(){
-//   $.get('/api/random').then(function(data) {
-//   $('#question').html("")
-//   $('#category').html("")
-//   $('#question').prepend(makeQuestion(data.info));
-//   $('#category').prepend(makeCategory(data.info));
-//   answer = data.info.answer
-//   console.log(answer)
-//   }, function(err) {console.error(err);})
-// }
 
-// setInterval(generateQuestion, 9000);
-
-
-// function checkAnswer(){
-//     // console.log(answer)
-//     var msg = $('.msg-content')
-//     var name = $('.username')
-
-//   for (var i = 0; i < msg.length; i++){
-//     if (answer == msg[i].innerHTML) {
-//        name = msg[i].previousElementSibling.innerHTML
-//       console.log(name + ' WAS CORRECT!')
-//     } else {
-//       console.log('KEEP GUESSING')
-//     }
-//   }
-// }
 
 
 
