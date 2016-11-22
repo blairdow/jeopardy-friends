@@ -67,5 +67,3 @@ function makeCategory(obj) {
     return `<p>${obj.category}</p>`
 }
 
-
-
