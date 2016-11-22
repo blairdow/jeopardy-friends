@@ -60,15 +60,12 @@ function checkAnswer(){
 function makeQuestion(obj) {
    return `
           <p>${obj.question}</p>
-
           `;
 }
 
 function makeCategory(obj) {
     return `<p>${obj.category}</p>`
 }
-
-
 
 
 

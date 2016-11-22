@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: #f2ea66;
+    background-color: #151b59;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+}
+.login{
+  background-image: url(../images/trebek-2_720.jpg)
+}
+.logout{
+  background-image: url(../images/login.jpg)
+}
+.login-box{
+  height: 50px;
+  width: 190px;
+  background-color: #f2ea66;
+  border-radius: 10px;
+}
+.login-pointer-text{
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 400px;
+}
+button{
+  margin-bottom: 50px;
+}
+/*MEDIA QUERIES*/
+
+@media (max-width: 992px) {
+    body{
+        background-image: url();
+    }
+}
+
