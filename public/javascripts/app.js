@@ -33,11 +33,12 @@ function generateQuestion(){
   }, function(err) {console.error(err);})
 }
 
-setInterval(generateQuestion, 15000);
+setInterval(generateQuestion, 10000);
 
 
 function checkAnswer(){
     console.log('answer: ', answer)
+    console.log
     var msg = $('.msg-content')
     var name = $('.username')
 
