@@ -97,11 +97,12 @@ a {
 /*MEDIA QUERIES*/
 
 @media (max-width: 992px) {
-    #category, #question, .chatroom {
-        font-size: 1em;
+        #category, #question {
+        font-size: 2em;
     }
     .chatroom {
         height: 20vh;
+        font-size: 1.5em;
     }
     .cropped-trebek-img {
         display: initial;
