@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     scrollDown()
   });
 
+//keep chatroom scrolled to the bottom
 function scrollDown(){
     
     $('.chatroom').animate({ scrollTop: $(document).height() }, "slow");
@@ -50,12 +51,16 @@ function checkAnswer(){
 }
 
   document.getElementById('btn-send-msg').addEventListener('click', function() {
-    socket.emit('add-message', {
-      name: userEmail,
-      msg: newMsg.value
-    });
-      checkAnswer();
-    newMsg.value = '';
+//    console.log('message: ', newMsg.value)
+    if(newMsg.value) {
+        socket.emit('add-message', {
+          name: userEmail,
+          msg: newMsg.value
+        });
+          checkAnswer();
+          newMsg.value = '';
+          newMsg.focus()
+    }
   });
 
   function addMessage(data) {
