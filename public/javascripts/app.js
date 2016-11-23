@@ -21,11 +21,12 @@ function generateQuestion(){
   }, function(err) {console.error(err);})
 }
 
-setInterval(generateQuestion, 15000);
+setInterval(generateQuestion, 10000);
 
 
 function checkAnswer(){
     console.log('answer: ', answer)
+    console.log
     var msg = $('.msg-content')
     var name = $('.username')
 
@@ -53,7 +54,6 @@ function checkAnswer(){
     messages.innerHTML += ['<li class="chat-message"><span class="userEmail">', data.name, '</span>: <span class="msg-content">', data.msg, '</span></li>'].join('');
 
   }
-
 
 });
 
