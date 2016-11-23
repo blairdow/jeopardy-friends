@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
   var messages = document.getElementById('messages');
+  var $chatroom = $('.chatroom')
   var newMsg = document.getElementById('new-msg');
   var userName = document.getElementById('user-name');
   var userEmail = document.getElementById('user-email').innerHTML;
@@ -8,8 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
   var socket = io();
   socket.on('add-message', function (data) {
     addMessage(data);
+    scrollDown()
   });
 
+function scrollDown(){
+    
+    $('.chatroom').animate({ scrollTop: $(document).height() }, "slow");
+    
+    return false;
+    
+}   
+        
 function generateQuestion(){
   $.get('/api/random').then(function(data) {
   $('#question').html("")
@@ -49,11 +59,12 @@ function checkAnswer(){
   });
 
   function addMessage(data) {
-
-    messages.innerHTML += ['<li class="chat-message"><span class="userEmail">', data.name, '</span>: <span class="msg-content">', data.msg, '</span></li>'].join('');
-
+    var div = document.createElement('div')
+    div.className = 'chat-message'
+    div.innerHTML = `<span class="userEmail"> ${data.name} </span>: <span class="msg-content"> ${data.msg} </span>`
+    console.log($chatroom)
+    $chatroom.append(div)
   }
-
 
 });
 
