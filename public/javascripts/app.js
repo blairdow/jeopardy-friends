@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var newMsg = document.getElementById('new-msg');
   var userName = document.getElementById('user-name');
   var userEmail = document.getElementById('user-email').innerHTML;
+  var $sendButton = $('#btn-send-msg')
   var answer;
 
   var socket = io();
@@ -49,25 +50,35 @@ function checkAnswer(){
     }
   }
 }
-
-  document.getElementById('btn-send-msg').addEventListener('click', function() {
-//    console.log('message: ', newMsg.value)
-    if(newMsg.value) {
-        socket.emit('add-message', {
-          name: userEmail,
-          msg: newMsg.value
-        });
-          checkAnswer();
-          newMsg.value = '';
-          newMsg.focus()
+    
+//    function to send chat to socket 
+    function sendSocket(){
+        if(newMsg.value) {
+            socket.emit('add-message', {
+              name: userEmail,
+              msg: newMsg.value
+            });
+              checkAnswer();
+              newMsg.value = '';
+              newMsg.focus()
+        }
     }
-  });
+    
+  //send chat when send message is clicked  
+  $sendButton.on('click', sendSocket);
+  
+  //send message with enter key  
+  newMsg.addEventListener('keyup', function (event){
+      if(event.which == 13) {
+          sendSocket()
+      }
+  })
+    
 
   function addMessage(data) {
     var div = document.createElement('div')
     div.className = 'chat-message'
     div.innerHTML = `<span class="userEmail"> ${data.name} </span>: <span class="msg-content"> ${data.msg} </span>`
-    console.log($chatroom)
     $chatroom.append(div)
   }
 
