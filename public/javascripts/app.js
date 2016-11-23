@@ -92,7 +92,7 @@ function generateQuestion() {
 
 //    function to send chat to socket
     function sendSocket(){
-        if(newMsg.value) {
+        if(newMsg.value.trim() !== "") {
             socket.emit('add-message', {
               name: userEmail,
               msg: newMsg.value
@@ -108,14 +108,13 @@ function generateQuestion() {
   //send message with enter key
   newMsg.addEventListener('keyup', function (event){
       if(event.which == 13) {
-          
           sendSocket();
       }
   })
 
   //send chat when send message is clicked
   $sendButton.on('click', function() {
-    
+    if(newMsg.value)
     sendSocket();
   })
 
