@@ -1,17 +1,22 @@
 body {
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Maitree', serif;
   color: #f2ea66;
     background-color: #151b59;
     background-repeat: no-repeat;
-    height: 100vh;
+
 
 }
 .login{
-  background-image: url(../images/trebek-2_720.jpg)
+  background-image: url(../images/trebek-2_720.jpg);
+  background-repeat: no-repeat;
+  height: 500px;
 }
 .logout{
-  background-image: url(../images/login.jpg)
+  background-image: url(../images/login.jpg);
+  height: 250px;
+  width: 150px;
+
 }
 .login-box{
   height: 50px;
@@ -29,7 +34,7 @@ button{
 /*MEDIA QUERIES*/
 
 @media (max-width: 992px) {
-    body{
+    .logout{
         background-image: url();
     }
 }

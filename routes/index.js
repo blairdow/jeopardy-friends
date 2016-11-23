@@ -13,6 +13,10 @@ router.get('/index', function(req, res,next) {
   res.render('index', { title: 'Jeopardy with Friends - Live!', user: req.user });
 
 });
+router.get('/logged-out', function(req, res,next) {
+  res.render('logout', { title: 'Jeopardy with Friends - Live!', user: req.user });
+
+});
 
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
@@ -32,7 +36,7 @@ router.get('/oauth2callback', passport.authenticate(
 // OAuth logout route
 router.get('/logout', function(req, res){
   req.logout();
-  res.redirect('/');
+  res.redirect('/logged-out');
 });
 
 
