@@ -7,6 +7,7 @@ var pagesController = require('../controllers/pages');
 router.get('/api/random', pagesController.apiDetails)
 router.get('/', pagesController.welcome)
 router.get('/welcome', pagesController.welcome)
+router.get('/currentquestion', pagesController.question)
 
 // The root route renders our only view
 router.get('/index', function(req, res,next) {
