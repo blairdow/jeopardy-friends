@@ -24,6 +24,11 @@ $.get('/currentquestion').then(function(data){
  //append question coming in from socket
   socket.on('update-question', function(data){
     appendQuestion(data)
+    
+  })
+  
+  socket.on('right-answer', function(data){
+    makeAnswer(data.answer, data.email)
   })
 
 //keep chatroom scrolled to the bottom
@@ -48,26 +53,40 @@ function appendQuestion(data){
 function checkAnswer(){
   var msgCheck = newMsg.value.trim()
   var answerCheck = answer
-  // console.log('msg: ', newMsg.value)
-  if (msgCheck == answerCheck) {
+  
+  if (msgCheck.toLowerCase() == answerCheck.toLowerCase()) {
     console.log(userEmail + ' is the dawg now')
-
+    
+    socket.emit('right-answer', {
+        answer: answer,
+        email: userEmail
+    })
+    
+    
     //send new question if answer is right
-    generateQuestion();
+    setTimeout(function(){
+        generateQuestion()
+    }, 5000)
+    
   }
 }
 
 //get question from API and send to socket
 function generateQuestion() {
   $.get('/api/random').then(function(data) {
-    question = {
+    var stripHTML = data.info.answer.replace(/<[^>]*>/g, "")
+    var stripAns = stripHTML.replace(/[^a-zA-Z ]/g, "")
+    
+    question = { 
       question: data.info.question,
       category: data.info.category,
-      answer: data.info.answer
+      answer: stripAns
     }
     socket.emit('new-question', question)
 
   }, function(err) {console.error(err);})
+  
+  
 }
 
 
@@ -89,14 +108,14 @@ function generateQuestion() {
   //send message with enter key
   newMsg.addEventListener('keyup', function (event){
       if(event.which == 13) {
-          checkAnswer();
+          
           sendSocket();
       }
   })
 
   //send chat when send message is clicked
   $sendButton.on('click', function() {
-    checkAnswer();
+    
     sendSocket();
   })
 
@@ -118,4 +137,13 @@ function makeQuestion(obj) {
 
 function makeCategory(obj) {
     return `<p>${obj.category}</p>`
+}
+
+function makeAnswer(answer, email){
+    $('#answer').append(
+        `${answer} was correct! Good job ${email}. Next question coming up...`
+    )
+    setTimeout(function(){
+        $('#answer').html('')
+    }, 5000)
 }

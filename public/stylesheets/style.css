@@ -24,7 +24,7 @@ a {
     margin-bottom: 5px;
 }
 
-.chatroom, #category, #question, #btn-send-msg, #new-msg {
+.chatroom, #category, #question, #btn-send-msg, #new-msg, #answer {
     border: #f2ea66 solid 1px;
     border-radius: 10px;
     padding: 10px;
@@ -33,8 +33,13 @@ a {
     background-color: #151b59;
 }
 
-#category, #question {
+#category, #question, #answer {
     text-align: center;
+}
+
+#answer {
+    color: whitesmoke;
+    font-size: 1.5em;
 }
 
 .chatroom, #question {

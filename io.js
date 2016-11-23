@@ -16,9 +16,14 @@ io.on('connection', function (socket) {
     });
 
   socket.on('new-question', function (data){
-    console.log('io.js log new question')
+    questionLoad.setQuestion = data
     // question = generateQuestion()
     io.emit('update-question', data)
+    
+  })
+  
+  socket.on('right-answer', function(data){
+      io.emit('right-answer', data)
   })
 
 });
