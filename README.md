@@ -1,22 +1,25 @@
 #Jeopardy with Friends - LIVE!
-##Now Your Friends Can Really Know How Smart You Really Are!
+
+##Now Your Friends Can Really Know      How Smart You Really Are!
 
 ![Luck has Changed!](/public/images/readme.jpg)
 
-##Our Approach as a Team
+##Our Team Approach
 This was a team project. Tasks were assigned according to what each member was comfortable with. We also allowed room for flexibility and learning opportunities. We communicated continously and allowed room for mistakes. We also provided support to one another when necessary. 
 
 Allowing room for change really helped our project come together. We stayed on task and met our deadlines. We feel very good about our team-work and accomplishments.
 
 
-### (Heroku link) 
+##Deployment
+
+### Heroku Link 
 
 ```
 
 
 ```
 
-###Technologies used
+###Technologies Used
 * HTML
 * CSS
 * Heroku hosting
@@ -26,9 +29,7 @@ Allowing room for change really helped our project come together. We stayed on t
 * Google API
 * Express & Node
 * GitHub
-* Socket.io
-
-##Deployment 
+* Socket.io 
 
 
 
