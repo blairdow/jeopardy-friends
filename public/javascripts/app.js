@@ -43,35 +43,17 @@ function appendQuestion(data){
 
 }
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d602768746a73977e8ec0a087c1faa16556ecf58
 setInterval(generateQuestion, 10000);
 
 
 function checkAnswer(){
-<<<<<<< HEAD
   var msgCheck = newMsg.value
   var answerCheck = answer
   console.log('msg: ', newMsg.value)
   console.log('answer: ', answer)
   if (msgCheck == answerCheck) {
     console.log('YOURE THE MAN NOW DAWG')
-=======
-    console.log('answer: ', answer)
-    console.log
-    var msg = $('.msg-content')
-    var name = $('.username')
-
-  for (var i = 0; i < msg.length; i++){
-    if (answer == msg[i].innerHTML) {
-       name = msg[i].previousElementSibling.innerHTML
-      console.log(name + ' WAS CORRECT!')
-    } else {
-      console.log('KEEP GUESSING')
-    }
->>>>>>> d602768746a73977e8ec0a087c1faa16556ecf58
   }
 }
 
