@@ -15,7 +15,7 @@ Allowing room for change really helped our project come together. We stayed on t
 #### Heroku Link 
 
 ```
-
+[Jeopardy with Friends - LIVE!](vast-citadel-23192.herokuapp.com)
 
 ```
 
@@ -37,7 +37,7 @@ Allowing room for change really helped our project come together. We stayed on t
 
 ### Slide-Deck 
 ```
-https://docs.google.com/presentation/d/1GfJKvEB1HDzsa3qXT_ceGQPwEn9gO0JQYY6jBtbI_MU/edit?usp=sharing
+[Learn more about our project...](https://docs.google.com/presentation/d/1GfJKvEB1HDzsa3qXT_ceGQPwEn9gO0JQYY6jBtbI_MU/edit?usp=sharing)
 ```
 
 ### Design
@@ -47,7 +47,7 @@ We used a classic Jeopardy aesthetic. Our in-house designer used the classic Jeo
 
 
 ```
-https://trello.com/b/NpQVg4ax/jeopardy-w-friends
+[Check out our Trello board!](https://trello.com/b/NpQVg4ax/jeopardy-w-friends)
 
 ```
 
