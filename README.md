@@ -2,7 +2,7 @@
 
 ##Now Your Friends Can Really Know      How Smart You Really Are!
 
-![Luck has Changed!](/public/images/readme.jpg)
+[Luck has Changed!](../images/readme.jpg)
 
 ##Our Team Approach
 This was a team project. Tasks were assigned according to what each member was comfortable with. We also allowed room for flexibility and learning opportunities. We communicated continously and allowed room for mistakes. We also provided support to one another when necessary. 
@@ -14,10 +14,10 @@ Allowing room for change really helped our project come together. We stayed on t
 
 #### Heroku Link 
 
-```
+
 [Jeopardy with Friends - LIVE!](vast-citadel-23192.herokuapp.com)
 
-```
+
 
 ###Technologies Used
 * HTML
@@ -36,9 +36,9 @@ Allowing room for change really helped our project come together. We stayed on t
 ##The Process
 
 ### Slide-Deck 
-```
+
 [Learn more about our project...](https://docs.google.com/presentation/d/1GfJKvEB1HDzsa3qXT_ceGQPwEn9gO0JQYY6jBtbI_MU/edit?usp=sharing)
-```
+
 
 ### Design
 We used a classic Jeopardy aesthetic. Our in-house designer used the classic Jeopardy blue and yellow to mockup some great looking wireframes that were followed. We used pictures of Alex Trebek to bring the user an authentic experience. 
@@ -46,10 +46,10 @@ We used a classic Jeopardy aesthetic. Our in-house designer used the classic Jeo
 ### Trello Link
 
 
-```
+
 [Check out our Trello board!](https://trello.com/b/NpQVg4ax/jeopardy-w-friends)
 
-```
+
 
 
 
@@ -64,10 +64,10 @@ We did have a couple of Ice Box features that we did not accomplish:
 
 ##Team Members: 
 
-[Karla GilSalazar](https://github.com/karla001)
-[James Costello](https://github.com/Benny-Profane)
-[Michelle Kiziak](https://github.com/lkiziak)
-[Blair Dow](https://github.com/blairdow)
+[Karla GilSalazar](https://github.com/karla001)  
+[James Costello](https://github.com/Benny-Profane)  
+[Michelle Kiziak](https://github.com/lkiziak)  
+[Blair Dow](https://github.com/blairdow)  
 
 
 
