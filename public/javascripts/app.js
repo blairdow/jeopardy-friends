@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var userEmail = document.getElementById('user-email').innerHTML;
   var $sendButton = $('#btn-send-msg')
   var answer;
+
   var question;
 
   var socket = io();
@@ -21,12 +22,13 @@ $.get('/currentquestion').then(function(data){
 
   });
 
+
  //append question coming in from socket
   socket.on('update-question', function(data){
     appendQuestion(data)
-    
+
   })
-  
+
   socket.on('right-answer', function(data){
     makeAnswer(data.answer, data.email)
   })
@@ -43,7 +45,6 @@ function appendQuestion(data){
   $('#category').html("")
   $('#question').prepend(makeQuestion(data));
   $('#category').prepend(makeCategory(data));
-
   //set answer variable
   answer = data.answer
   console.log(answer)
@@ -53,21 +54,21 @@ function appendQuestion(data){
 function checkAnswer(){
   var msgCheck = newMsg.value.trim()
   var answerCheck = answer
-  
+
   if (msgCheck.toLowerCase() == answerCheck.toLowerCase()) {
     console.log(userEmail + ' is the dawg now')
-    
+
     socket.emit('right-answer', {
         answer: answer,
         email: userEmail
     })
-    
-    
+
+
     //send new question if answer is right
     setTimeout(function(){
         generateQuestion()
     }, 5000)
-    
+
   }
 }
 
@@ -76,8 +77,8 @@ function generateQuestion() {
   $.get('/api/random').then(function(data) {
     var stripHTML = data.info.answer.replace(/<[^>]*>/g, "")
     var stripAns = stripHTML.replace(/[^a-zA-Z ]/g, "")
-    
-    question = { 
+
+    question = {
       question: data.info.question,
       category: data.info.category,
       answer: stripAns
@@ -85,8 +86,7 @@ function generateQuestion() {
     socket.emit('new-question', question)
 
   }, function(err) {console.error(err);})
-  
-  
+
 }
 
 
@@ -103,6 +103,7 @@ function generateQuestion() {
               newMsg.focus()
         }
     }
+
 
 
   //send message with enter key
@@ -137,6 +138,7 @@ function makeQuestion(obj) {
 function makeCategory(obj) {
     return `<p>${obj.category}</p>`
 }
+
 
 function makeAnswer(answer, email){
     $('#answer').append(

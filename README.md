@@ -12,10 +12,10 @@ Allowing room for change really helped our project come together. We stayed on t
 
 ##Deployment
 
-### Heroku Link 
+#### Heroku Link 
 
 ```
-
+[Jeopardy with Friends - LIVE!](vast-citadel-23192.herokuapp.com)
 
 ```
 
@@ -37,7 +37,7 @@ Allowing room for change really helped our project come together. We stayed on t
 
 ### Slide-Deck 
 ```
-https://docs.google.com/presentation/d/1GfJKvEB1HDzsa3qXT_ceGQPwEn9gO0JQYY6jBtbI_MU/edit?usp=sharing
+[Learn more about our project...](https://docs.google.com/presentation/d/1GfJKvEB1HDzsa3qXT_ceGQPwEn9gO0JQYY6jBtbI_MU/edit?usp=sharing)
 ```
 
 ### Design
@@ -47,7 +47,7 @@ We used a classic Jeopardy aesthetic. Our in-house designer used the classic Jeo
 
 
 ```
-https://trello.com/b/NpQVg4ax/jeopardy-w-friends
+[Check out our Trello board!](https://trello.com/b/NpQVg4ax/jeopardy-w-friends)
 
 ```
 
@@ -55,9 +55,19 @@ https://trello.com/b/NpQVg4ax/jeopardy-w-friends
 
 ###Unresolved Issues
 
+Our team was able to accomplish all of our core features for this project. 
+We did have a couple of Ice Box features that we did not accomplish:
+
+*We would have liked to implement a score board feature to help keep track of how players are doing.
+*We also wanted to allow the user to choose the categories for their jeopardy questions. 
 
 
+##Team Members: 
 
+[Karla GilSalazar](https://github.com/karla001)
+[James Costello](https://github.com/Benny-Profane)
+[Michelle Kiziak](https://github.com/lkiziak)
+[Blair Dow](https://github.com/blairdow)
 
 
 

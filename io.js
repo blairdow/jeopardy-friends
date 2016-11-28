@@ -4,6 +4,7 @@ var io = require('socket.io')();
 var questionLoad = require('./config/question')
 
 
+
 // Listen for new connections from clients (socket)
 io.on('connection', function (socket) {
 
@@ -19,9 +20,9 @@ io.on('connection', function (socket) {
     questionLoad.setQuestion = data
     // question = generateQuestion()
     io.emit('update-question', data)
-    
+
   })
-  
+
   socket.on('right-answer', function(data){
       io.emit('right-answer', data)
   })
