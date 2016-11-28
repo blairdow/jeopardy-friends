@@ -16,16 +16,25 @@ function apiDetails(req, res, next){
   } else {
     res.json(err);
   }
-  // console.log(apiData);
-  // res.JSON(apiData);
+
   });
 };
 
 function welcome(req, res, next) {
-      res.render('homepage', { user: req.user });
+    res.render('homepage', { user: req.user });
+}
+
+function about(req, res, next) {
+    res.render('about', { user: req.user })
+}
+
+function question (req, res, next) {
+   res.json(require('../config/question'))
 }
 
 module.exports = {
   apiDetails: apiDetails,
-  welcome: welcome
+  welcome: welcome,
+  question: question,
+  about: about
 }
