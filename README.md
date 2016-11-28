@@ -2,7 +2,7 @@
 
 ##Now Your Friends Can Really Know      How Smart You Really Are!
 
-[Luck has Changed!](../images/readme.jpg)
+![Luck has Changed!](../images/readme.jpg)
 
 ##Our Team Approach
 This was a team project. Tasks were assigned according to what each member was comfortable with. We also allowed room for flexibility and learning opportunities. We communicated continously and allowed room for mistakes. We also provided support to one another when necessary. 
