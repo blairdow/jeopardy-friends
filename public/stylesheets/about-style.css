@@ -1,0 +1,43 @@
+body {
+    color: #f2ea66;
+    background-color: #151b59;
+    font-family: "Open Sans Condensed";
+    display: flex;    
+    min-height: 100vh;
+    flex-direction: column;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+main {
+flex: 1 0 auto;
+}
+
+.prof-image {
+    max-width: 100px;
+/*    max-height: 100px;*/
+    margin-top: 20px;
+}
+
+.title {
+    font-family: Maitree;
+    letter-spacing: normal;
+}
+
+
+.box {
+    margin-top: 20px;
+    border: #f2ea66 solid 1px;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+a {
+    color: #f2ea66;
+    font-size: 1.5em;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+

@@ -21,7 +21,11 @@ function apiDetails(req, res, next){
 };
 
 function welcome(req, res, next) {
-      res.render('homepage', { user: req.user });
+    res.render('homepage', { user: req.user });
+}
+
+function about(req, res, next) {
+    res.render('about', { user: req.user })
 }
 
 function question (req, res, next) {
@@ -31,5 +35,6 @@ function question (req, res, next) {
 module.exports = {
   apiDetails: apiDetails,
   welcome: welcome,
-  question: question
+  question: question,
+  about: about
 }
