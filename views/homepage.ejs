@@ -3,53 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Jeopardy With Friends - Live!</title>
-         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-         <!-- Materialize CSS Framework -->
-         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-    <!--FONTS-->
-          <link href="https://fonts.googleapis.com/css?family=Maitree:500|Open+Sans+Condensed:300,700" rel="stylesheet">
-         <link rel="stylesheet" href="stylesheets/style-alt.css"/>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!--MATERIALIZE ICONS    -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<!-- Materialize CSS Framework -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+<!--FONTS-->
+        <link href="https://fonts.googleapis.com/css?family=Maitree:500|Open+Sans+Condensed:300,700" rel="stylesheet">
+<!--STYLESHEET-->
+        <link rel="stylesheet" href="stylesheets/style-alt.css"/>
 </head>
+
 <body class="login">
     <div class="row">
 
         <div class="col m12 l6 offset-l6 card-panel indigo darken-4 center-align">
-       <h1 >Jeopardy With Friends-Live!</h1>
-       <h3>Prove your worth-Live!</h3>
 
-        <!--    login/logout-->
-      <div class="col s6 offset-s3">
-       <button class="login-box">
-        <ul class="right">
-          <% if (user) { %>
-            <li><a href="/index">Play Now!</a></li>
-          <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
-          <% } else { %>
-          <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a></li>
-          <% } %>
-        </ul>
-        </button>
+           <h1 >Jeopardy With Friends-Live!</h1>
+           <h3>Prove your worth!</h3>
 
-      </div>
-      </div>
+            <!--    login/logout-->
+            <div class="col s6 offset-s3">
+                <button class="login-box">
+                    <ul class="right">
+                      <% if (user) { %>
+                        <li><a href="/index">Play Now!</a></li>
+                        
+                        <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
+                      <% } else { %>
+                        <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a></li>
+                      <% } %>
+                    </ul>
+                </button>
+
+            </div>
+        </div>
     </div>
 
 <!--   Jquery-->
-     <script
-  src="https://code.jquery.com/jquery-3.1.1.min.js"
-  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
-  crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
 
-      <script src="node_modules/socket.io/node_modules/socket.io-client/dist/socket.io.js"></script>
+<!-- Using Underscore for collection manipulation and client-side templating -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
 
-     <!-- Using Underscore for collection manipulation and client-side templatin -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+<!-- JavaScript for Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+    
+<!--browser side javascript-->
+    <script src="javascripts/app.js"></script>
 
-      <!-- JavaScript for Materialize -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-     <script src="javascripts/app.js"></script>
-     <!-- IO  -->
-     <script src="/socket.io/socket.io.js"></script>
 
 
 </body>
