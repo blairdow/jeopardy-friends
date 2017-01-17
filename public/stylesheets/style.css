@@ -1,9 +1,19 @@
 body {
-  padding: 50px;
-  font: 14px "Open Sans Condensed", Helvetica, Arial, sans-serif;
-  color: #f2ea66;
-  background-color: #151b59;
-  background-repeat: no-repeat;
+    font: 14px "Open Sans Condensed", Helvetica, Arial, sans-serif;
+    color: #f2ea66;
+    background-color: #151b59;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.container {
+    width: 90%;
 }
 
 .chat-trebek-img {
@@ -23,13 +33,21 @@ a {
     margin-bottom: 5px;
 }
 
-.chatroom, #category, #question, #btn-send-msg, #new-msg, #answer {
+.chatroom, #category, #question, #btn-send-msg, #new-msg, #answer, .box {
     border: #f2ea66 solid 1px;
     border-radius: 10px;
     padding: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     background-color: #151b59;
+} 
+
+.box {
+    padding: 0;
+}
+
+#btn-send-msg {
+    width: 100%;
 }
 
 #category, #question, #answer {
@@ -72,6 +90,16 @@ a {
     color: #f5f0a3
 }
 
+.input-field label {
+    left: 1rem;
+    top: 1rem;
+}
+
+.input-field label.active {
+    left: 0;
+    top: 0.8rem;
+}
+
 a:hover {
     text-decoration: underline;
 }
@@ -89,13 +117,31 @@ a {
     text-align: right;
 }
 
-
 .material-icons {
     padding-right: 10px;
 }
 
 .cropped-trebek-img {
     display: none;
+}
+
+/*FOOTER*/
+footer.page-footer {
+    padding-top: 0;
+    margin-top: 0;
+}
+
+footer.page-footer .footer-copyright {
+    overflow: visible;
+}
+
+footer a, footer.page-footer .footer-copyright {
+    color: #f2ea66;
+    font-size: 1.25em;
+}
+
+footer a:hover {
+    color: #ffe200;
 }
 
 /*MEDIA QUERIES*/
@@ -110,7 +156,9 @@ a {
     }
     .cropped-trebek-img {
         display: initial;
+        width: 100%;
     }
+    
     .chat-trebek-img {
         background-image: url();
     }

@@ -21,68 +21,69 @@
 <body class="chat-trebek-img">
   
 <main>
-<div class="row">
-    <div class="cropped-trebek-img">
-        <img src="../images/jeopardy-cropped1.jpg" alt="jeopardy logo" class='responsive-img'>
-    </div>        
-<!--  user info -->
-    <div class="col s12">
-        <ul class="login-index">
-              <% if (user) { %>
-            <li><a href="/logout" class='logout'>Logout<i class="material-icons right">trending_flat</i></a></li>
-            <li id="user-email"><%= user.email %></li>
-            <% } %>
-         </ul>
-
-    </div>        
-
-
-
-        <% if (user) { %>
-        <div class="col m12 l6 offset-l6">
-
-            <!--category goes here-->
-            <div id="category"></div>
-
-            <!--question goes here-->
-            <div id="question"></div>
-
-            <!--answer appears here-->
-            <div id="answer"></div>
-
-        <!-- Socket IO chat -->
-            <!-- messages view -->
-            <div class="chatroom">
-
+<div class="container">
+    <div class="row">
+        <div class="col s12 center">
+            <div class="cropped-trebek-img">
+                <img src="../images/jeopardy-cropped1.jpg" alt="jeopardy logo" class='responsive-img'>
+            </div>        
+        </div>
+    <!--  user info -->
+        <div class="col s6 offset-s6 m3 offset-m9 l2 offset-l10">
+            <div class="box">
+                <ul class="login-index">
+                    <% if (user) { %>
+                        <li><a href="/logout" class='logout'>Logout<i class="material-icons right">trending_flat</i></a></li>
+                        <li id="user-email"><%= user.email %></li>
+                    <% } %>
+                 </ul>
             </div>
 
-            <!-- message input  -->
-            <div class="input-field">
+        </div>        
 
-                <label for='new-msg'>Message:</label>
-                <textarea id="new-msg"></textarea>
 
-                <button id='btn-send-msg' class="indigo darken-4 right">Send Message</button>
+
+            <% if (user) { %>
+            <div class="col m12 l6 offset-l6">
+
+                <!--category goes here-->
+                <div id="category"></div>
+
+                <!--question goes here-->
+                <div id="question"></div>
+
+                <!--answer appears here-->
+                <div id="answer"></div>
+
+            <!-- Socket IO chat -->
+                <!-- messages view -->
+                <div class="chatroom">
+
+                </div>
+
+                <!-- message input  -->
+                <div class="input-field">
+
+                    <label for='new-msg'>Message:</label>
+                    <textarea id="new-msg"></textarea>
+
+                    <button id='btn-send-msg' class="indigo darken-4 right">Send Message</button>
+                </div>
+            <!-- Socket IO chat end-->
             </div>
-        <!-- Socket IO chat end-->
         </div>
     </div>
 </main>
 
-    <!--- footer -->
-    
-    <footer class="page-footer indigo darken-4">
-      <div class="container">
-          <div class="row">
-            <div class="col s6">
-                <p>© 2016 Copyright "What is A Team?"</p>
-            </div>
-            <div class="col s6">
-                <p class='right'><a href="/about">About</a></p>
-            </div>
-          </div>
-      </div>
-    </footer>
+<!--- footer --> 
+<footer class="page-footer indigo darken-4">
+    <div class="footer-copyright">
+        <div class="container">
+                © 2016 Copyright "What is A Team?"
+               <a href="/about" class='right'>About</a>
+        </div>
+    </div>
+</footer>
 
 <!--    show login if user not logged in-->
     <% } else { %>
