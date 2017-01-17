@@ -1,17 +1,24 @@
 <!DOCTYPE html>
 <html>
   <head>
-     <title>Jeopardy with Friends - Live!</title>
-     <!-- Google Icon Fonts used by Materialize -->
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Materialize CSS Framework -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> 
-    <!--     google fonts-->
+    <title>Jeopardy with Friends - Live!</title>
+      
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Icon Fonts used by Materialize -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+<!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> 
+
+<!--     google fonts-->
     <link href="https://fonts.googleapis.com/css?family=Maitree:500|Open+Sans+Condensed:300,700" rel="stylesheet">
-     <link rel="stylesheet" href="stylesheets/style.css"/>
+      
+<!--MAIN STYLESHEET    -->
+    <link rel="stylesheet" href="stylesheets/style.css"/>
   </head>
   
-  <body class="chat-trebek-img">
+<body class="chat-trebek-img">
   
 <main>
 <div class="row">
@@ -27,42 +34,40 @@
             <% } %>
          </ul>
 
-      </div>        
+    </div>        
 
 
 
-    <% if (user) { %>
-    <div class="col m12 l6 offset-l6">
+        <% if (user) { %>
+        <div class="col m12 l6 offset-l6">
 
-<!--   category goes here-->
-        <div id="category"></div>
-      
-<!--    question goes here-->
-       <div id="question"></div>
-       
-<!--       answer appears here-->
-      <div id="answer"></div>
-      
-    <!-- Socket IO chat -->
-      <!-- messages view -->
+            <!--category goes here-->
+            <div id="category"></div>
+
+            <!--question goes here-->
+            <div id="question"></div>
+
+            <!--answer appears here-->
+            <div id="answer"></div>
+
+        <!-- Socket IO chat -->
+            <!-- messages view -->
             <div class="chatroom">
-                
+
             </div>
 
             <!-- message input  -->
+            <div class="input-field">
 
-        <div class="input-field">
-            
-            <label for='new-msg'>Message:</label>
-            <textarea id="new-msg"></textarea>
-            
-            <button id='btn-send-msg' class="indigo darken-4 right">Send Message</button>
-        </div>
+                <label for='new-msg'>Message:</label>
+                <textarea id="new-msg"></textarea>
 
+                <button id='btn-send-msg' class="indigo darken-4 right">Send Message</button>
+            </div>
+        <!-- Socket IO chat end-->
         </div>
     </div>
 </main>
-    <!-- Socket IO chat end-->
 
     <!--- footer -->
     
@@ -93,8 +98,6 @@
     </div>
 
         <% } %>  
-        
-    
         
 <!--   Jquery-->
     <script

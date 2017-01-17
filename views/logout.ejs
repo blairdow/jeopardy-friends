@@ -3,36 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Jeopardy with Friends - Live!</title>
-     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-     <!-- Materialize CSS Framework -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-     <link rel="stylesheet" href="stylesheets/style-alt.css"/>
-      <link href="https://fonts.googleapis.com/css?family=Maitree:500|Open+Sans+Condensed:300,700" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+<!--MATERIALIZE ICONS-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+<!-- Materialize CSS Framework -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+    
+<!--GOOGLE FONTS    -->
+    <link href="https://fonts.googleapis.com/css?family=Maitree:500|Open+Sans+Condensed:300,700" rel="stylesheet">
+
+<!--MAIN STYLESHEET    -->
+    <link rel="stylesheet" href="stylesheets/style-alt.css"/>
+    
 </head>
 <body>
     <div class="row">
-<div class="logout col s2 offset-s1 ">
-</div>
-
         <div class="offset-s1 col s7  card-panel indigo darken-4 center-align">
-       <h1 >Jeopardy With Friends-Live!</h1>
-       <h3>Prove your worth-Live!</h3>
-       <h4>Play Again</h4>
-        <!--    login/logout-->
-      <div class="col s6 offset-s3">
-       <button class="login-box">
-        <ul class="right">
-          <% if (user) { %>
-            <li><a href="/index">Play Now!</a></li>
-          <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
-          <% } else { %>
-          <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a></li>
-          <% } %>
-        </ul>
-        </button>
-
-      </div>
-      </div>
+            <h1 >Jeopardy With Friends-Live!</h1>
+            <h3>Prove your worth-Live!</h3>
+            <h4>Play Again</h4>
+            
+            <!--    login/logout-->
+            <div class="col s6 offset-s3">
+                <button class="login-box">
+                    <ul class="right">
+                      <% if (user) { %>
+                        <li><a href="/index">Play Now!</a></li>
+                        <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
+                      <% } else { %>
+                        <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a></li>
+                      <% } %>
+                    </ul>
+                </button>
+            </div>
+        </div>
     </div>
 
 <!--   Jquery-->
@@ -50,8 +56,6 @@
     
 <!--browser side javascript-->
     <script src="javascripts/app.js"></script>
-    
-
 
 </body>
 </html>
