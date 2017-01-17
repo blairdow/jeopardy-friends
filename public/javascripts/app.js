@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   var socket = io();
 
+//get current question from sockets
 $.get('/currentquestion').then(function(data){
   appendQuestion(data)
 })

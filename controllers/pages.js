@@ -5,7 +5,9 @@ function apiDetails(req, res, next){
   var options = {
     url: rootURL
   }
+  
   var info = {};
+    
   request(options.url, function(err, response, body){
   if (!err && response.statusCode == 200) {
     var data = JSON.parse(body)[0];
