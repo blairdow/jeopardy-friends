@@ -19,27 +19,56 @@
     
 </head>
 <body>
-    <div class="row">
-        <div class="offset-s1 col s7  card-panel indigo darken-4 center-align">
-            <h1 >Jeopardy With Friends-Live!</h1>
-            <h3>Prove your worth-Live!</h3>
-            <h4>Play Again</h4>
+<main>
+    <div class="container">
+       
+        <div class="row">
+            <div class="col m6 s12 indigo darken-4 center box right">
+                <div class='padding'>
+                    <h1 >Jeopardy With Friends-Live!</h1>
+                    <h4>Play Again?</h4>
+
+                    <!--    login/logout-->
+                    <% if (user) { %>
+                        <div class="row">
+                            <div class="col s12">
+                                <button class="login-button">
+                                    <div class="center">
+                                        <a href="/index">Play Now!</a>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col s12">
+                                <button class="login-button">
+                                    <a href="/logout"><i class="material-icons center">trending_flat</i>Logout</a>
+                                </button>
+                            </div>
+                        </div>
+                    <% } else { %>
+                        <button class="login-button">
+                            <a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a>
+                        </button>
+                    <% } %>
+                    
+                </div>
+            </div>
             
-            <!--    login/logout-->
-            <div class="col s6 offset-s3">
-                <button class="login-box">
-                    <ul class="right">
-                      <% if (user) { %>
-                        <li><a href="/index">Play Now!</a></li>
-                        <li><a href="/logout"><i class="material-icons left">trending_flat</i>Logout</a></li>
-                      <% } else { %>
-                        <li><a href="/auth/google"><i class="material-icons left">vpn_key</i>Login with Google</a></li>
-                      <% } %>
-                    </ul>
-                </button>
+            <div class="col l6 m12 left">
+                <img src="../images/trebek-2_720.jpg" alt="alex trebek image" class='login-trebek img-responsive'>
             </div>
         </div>
+        
     </div>
+</main>
+
+<footer class="page-footer indigo darken-4">
+    <div class="footer-copyright">
+        <div class="container">
+                © 2016 Copyright "What is A Team?"
+               <a href="/about" class='right'>About</a>
+        </div>
+    </div>
+</footer>
 
 <!--   Jquery-->
     <script

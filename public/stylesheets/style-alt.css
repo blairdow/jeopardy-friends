@@ -1,4 +1,4 @@
-/*login page styling*/
+/*login and logout page styling*/
 
 body {
     font: 14px "Open Sans Condensed", Helvetica, Arial, sans-serif;
@@ -20,22 +20,25 @@ main {
 .login-trebek {
     max-width: 100%;
     max-height: 90%;
+    margin-top: 10%;
 }
 
 .box {
     border: #f2ea66 solid 1px;
     border-radius: 10px;
-    padding: 10px;
     margin-top: 10%;
     background-color: #151b59;
 }
 
+.padding {
+    padding: 5%;
+}
+
 .login-button{
     height: 50px;
-    width: 190px;
     background-color: #f2ea66;
     border-radius: 10px;
-    font-size: 24px;
+    padding: 0 15px;
 }
 
 .login-button a {

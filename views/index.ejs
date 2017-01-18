@@ -29,16 +29,13 @@
             </div>        
         </div>
     <!--  user info -->
-        <div class="col s6 offset-s6 m3 offset-m9 l2 offset-l10">
-            <div class="box">
-                <ul class="login-index">
+        <div class="col s6 offset-s6 m3 offset-m9">
+                <div class="login-index">
                     <% if (user) { %>
-                        <li><a href="/logout" class='logout'>Logout<i class="material-icons right">trending_flat</i></a></li>
-                        <li id="user-email"><%= user.email %></li>
+                        <span id="user-email"><%= user.email %></span>  |  
+                        <a href="/logout" class='logout'>Logout<i class="material-icons">trending_flat</i></a>  
                     <% } %>
-                 </ul>
-            </div>
-
+                </div>
         </div>        
 
 
